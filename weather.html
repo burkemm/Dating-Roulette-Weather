@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Dashboard</title>
+    <!--This link is for the Bootstrap CSS CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- This is my CSS sheet for the index.html -->
+    <link rel="stylesheet" href=".//styles.css">
+</head>
+<body>
+    <!--The Weather Dashboard title Titantron at the top of the page.-->
+    <div class="titantron">
+        <h1> <strong>Dating Roulette</strong></h1>
+    </div>
+    <div class="container">
+        <!--This is a new row for a city search.-->
+        <div class="row">
+            <div class="col-sm-4 bg-light bg-transparent">
+                <h4 class="pt-1 text-light"><strong>Date city location?</strong></h4>
+                <!--This is the text box for the city search.-->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"id="city-search" aria-label="City Search" aria-describedby="button-search">
+                    <!-- This is the search button. -->
+                    <div class="input-group-append">
+                        <button id="button-search">Search</button>
+                    </div>
+                </div>
+                <!--this is the button to clear the recently searched cities. It also chears the listed previously searched cities.-->
+                <button type="button" id="clear-data">Clear Data</button>
+                <ul class="list-group">
+
+                </ul>
+            </div>   
+            <!-- This is the box that displays a city's current weather stats and the weather -->
+            <div class="col-sm-8">
+                <div class="trimmer">
+                    <div class="col-sm-12" id="current-weather">
+                        <h3 class="city-name mb-1 mt-2 bolder" id="present-city"> </h3>
+                        <p>Temperature: <span id="presentTemperature"> </span></p>
+                        <p>Humidity: <span id="presentHumidity"> </span></p> 
+                        <p>Wind Speed: <span id="presentWindspeed"> </span></p>
+                        <p>UV index: <span id="presentUVIstat"></span></p> 
+                    </div>
+                </div>
+                <!--This is where our 5-day forecast is displayed.-->
+                <div id ="future-weather">
+                    <h3>5-Day Forecast</h3>
+                    <div class="row text-light">
+                        <div class="weather-card">
+                            <p id="forecast-day0"></p>
+                            <p id="forecast-image0"></p>
+                            <p>Temp: <span id="forecast-temperature0"></span></p>
+                            <p>Wind: <span id="forecast-windspeed0"></span></p>
+                            <p>Humidity: <span id="forecast-humidity0"></span></p>
+                        </div>
+                        <div class="weather-card">
+                            <p id="forecast-day1"></p>
+                            <p id="forecast-image1"></p>
+                            <p>Temp: <span id="forecast-temperature1"></span></p>
+                            <p>Wind: <span id="forecast-windspeed1"></span></p>
+                            <p>Humidity: <span id="forecast-humidity1"></span></p>
+                        </div>
+                        <div class="weather-card">
+                            <p id="forecast-day2"></p>
+                            <p id="forecast-image2"></p>
+                            <p>Temp: <span id="forecast-temperature2"></span></p>
+                            <p>Wind: <span id="forecast-windspeed2"></span></p>
+                            <p>Humidity: <span id="forecast-humidity2"></span></p>
+                        </div>
+                        <div class="weather-card">
+                            <p id="forecast-day3"></p>
+                            <p id="forecast-image3"></p>
+                            <p>Temp: <span id="forecast-temperature3"></span></p>
+                            <p>Wind: <span id="forecast-windspeed3"></span></p>
+                            <p>Humidity: <span id="forecast-humidity3"></span></p>
+                        </div>
+                        <div class="weather-card">
+                            <p id="forecast-day4"></p>
+                            <p id="forecast-image4"></p>
+                            <p>Temp: <span id="forecast-temperature4"></span></p>
+                            <p>Wind: <span id="forecast-windspeed4"></span></p>
+                            <p>Humidity: <span id="forecast-humidity4"></span></p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--jQuery JS-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!--Code to Jvascript File-->
+    <script src=".//weather.js"></script>
+</body>
+</html>
